@@ -17,6 +17,7 @@ class Producto extends Model
         'color_producto',
         'foto_producto',
         'precio_producto',
+        'stock',
     ];
 
     public function tipoproductos(){

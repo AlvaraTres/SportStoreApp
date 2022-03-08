@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('color_producto');
             $table->string('foto_producto', 2048)->nullable();
             $table->integer('precio_producto');
+            $table->integer('stock');
             $table->timestamps();
 
             $table->foreign('id_tipo_producto')->references('id')->on('tipo_productos')->onUpdate('cascade')->onDelete('cascade');

@@ -43,7 +43,12 @@ module.exports = {
             animation: {
                 'fade-in-left' : 'fade-in-left 1.5s ease-out',
                 'fade-in-right' : 'fade-in-right 1.5s ease-out',
-            }
+            },
+
+            padding: {
+                '1/3': '33.33333%',
+                '2/3': '66.66666%',
+            },
 
         },
     },
@@ -55,5 +60,5 @@ module.exports = {
         animation: ["motion-safe"],
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 };
