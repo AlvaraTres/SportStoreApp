@@ -16,6 +16,21 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        <style>
+            .inputfile{
+                display: none;
+            }
+
+            .inputfile + label {
+                display: block;
+                padding: 8px 21px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                background-color: #eee;
+                cursor: pointer;
+            }
+        </style>
+
         @livewireStyles
 
         <!-- Scripts -->
@@ -47,6 +62,13 @@
 
         @stack('modals')
 
+        @stack('js')
+
         @livewireScripts
+        <script>
+            window.addEventListener('swal', function(e){
+                Swal.fire(e.detail);
+            });
+        </script>
     </body>
 </html>
