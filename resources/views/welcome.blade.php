@@ -79,21 +79,22 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
-    <body class="antialiased">
+    <body>
 
-        <div class=" bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="font-sans antialiased">
+            <div class="min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+                @livewire('navigation')
+
+                @livewire('carousel')
+
+                @livewire('show-products-body')
+            </div>
+            @livewire('footer')
+
+            @stack('js')
             
-            @livewire('navigation')
-
-            @livewire('carousel')
-
-            @livewire('show-products-body')
-            
+            @livewireScripts
         </div>
-
-        @livewire('footer')
-
-        @livewireScripts
 
     </body>
 </html>
